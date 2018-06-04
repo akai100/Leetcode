@@ -17,14 +17,18 @@ public class TreeSolution {
 	{
 		if(node == null)
 			return curDepth - 1;
+		if(node.left == null && node.right == null)
+			return curDepth;
+		if(node.left == null)
+			return getMinDepthOfBinaryTree(node.right, curDepth + 1);
+		if(node.right == null)
+			return getMinDepthOfBinaryTree(node.left, curDepth + 1);
 		int leftMinDepth = getMinDepthOfBinaryTree(node.left, curDepth + 1);
 		int rightMinDepth = getMinDepthOfBinaryTree(node.right, curDepth + 1);
-		if ((rightMinDepth == 1|| leftMinDepth < rightMinDepth) && leftMinDepth != 1)
+		if (leftMinDepth < rightMinDepth)
 			return leftMinDepth;
-		else if ((leftMinDepth == 1 || rightMinDepth <= leftMinDepth) && rightMinDepth != 1)
-			return rightMinDepth;
 		else
-			return 0;
+			return rightMinDepth;
 	}
 	public int minimumDepthOfBinaryTree(TreeNode root)
 	{
