@@ -6,7 +6,6 @@ package com.zxl.test.leetcode.tree;
  *
  */
 public class TreeSolution {
-
 	/**
 	 * 获取最小深度
 	 * @param node
