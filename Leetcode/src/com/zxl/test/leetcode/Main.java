@@ -1,10 +1,7 @@
 package com.zxl.test.leetcode;
 
-import com.zxl.test.leetcode.stack.StackSolution;
-import com.zxl.test.leetcode.tree.TreeNode;
-import com.zxl.test.leetcode.tree.TreeSolution;
-
-import sun.reflect.generics.tree.Tree;
+import com.zxl.test.leetcode.linkedlist.LinkedListSolution;
+import com.zxl.test.leetcode.util.ListNode;
 
 public class Main {
 
@@ -13,9 +10,20 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String[] tokens ={"2", "1", "+", "3", "*"};
-		StackSolution solution = new StackSolution();
-		System.out.print(Double.NEGATIVE_INFINITY);
+		LinkedListSolution solution = new LinkedListSolution();
+		ListNode head = new ListNode(3);
+		ListNode node1 = new ListNode(2);
+		head.next = node1;
+		ListNode node2 = new ListNode(1);
+		node1.next = node2;
+		solution.reorderList(head);
+		ListNode curNode = head;
+		while (curNode != null)
+		{
+			System.out.println(curNode.val);
+			curNode = curNode.next;
+		}
+			
 	}
 
 }

@@ -1,4 +1,4 @@
-package com.zxl.test.leetcode.tree;
+package com.zxl.test.leetcode.util;
 
 public class TreeNode {
 
