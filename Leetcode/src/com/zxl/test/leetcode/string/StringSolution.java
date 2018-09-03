@@ -29,11 +29,9 @@ public class StringSolution {
 		return 0;
 	}
 	public List<Integer> findSubstring(String s, String[] words) {
-		List<Integer> ans = new ArrayList<Integer>();
-		int[] a = new int[words.length];
-		for(int i = 0; i < words.length; i++){
-		}
-		return ans;
+		List<Integer> res = new ArrayList<Integer>();
+		if(s == null || words == null || words.length == 0 || s.length() < words[0].length() * words.length)
+			return res;
 	}
 	public List<String> generateParenthesis(int n){
 		List<String> ans = new ArrayList<String>();
